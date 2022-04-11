@@ -6,7 +6,7 @@ Discord Token Bruteforce, Easy to bruteforce the accounts of discord.
 <br>
 
 **Steps**
-> 1. Install the requirements (colorama, tkinter, requests, datetime, ctypes, random, base64)
+> 1. Open requirements.py (Python3 requirements.py)
 > 2. Open bruteforce.py (Python3 bruteforce.py)
 > 3. Copy the ID of the account you want to enter (If you don't know how to do it, enter <a href="https://docs.discordsafe.com/docs/ayuda/copiar-ids">here</a>
 > 4. Enjoy ✨
